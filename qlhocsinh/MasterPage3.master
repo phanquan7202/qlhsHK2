@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage3.master.cs" Inherits="MasterPage3" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Administrator</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 589px;
+        }
+        .style3
+        {
+            width: 168px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+                <div style="width: 1002px; margin: 10px auto 10px auto">
+                    <asp:Image ID="Image8" runat="server" ImageUrl="~/image/TDC.jpg" />
+                </div>
+        <table style="margin: 0px auto 0px auto; width:100%; " align="left">   
+        <tr>
+            <td valign="top">
+            
+                <table style="color: #0099FF; font-size: 20px; font-weight: bold; width: 220px;" 
+                    align="left" bgcolor="#D0EEFD">
+                    <tr>
+                        <td style="padding: 10px; margin: 10px; font-size: 15px; color: #003399; border-bottom-color: #FFFFFF; border-bottom-style: groove;" 
+                            valign="middle">
+                            <a style="text-decoration:none; color:#003399" href="Administrator.aspx">
+                            <asp:Image ID="Image1" runat="server" Height="24px" 
+                                ImageUrl="~/icon/Info.png" Width="23px" />
+                            Administrator</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; margin: 10px; font-size: 15px; color: #003399; border-bottom-color: #FFFFFF; border-bottom-style: groove;" 
+                            valign="middle">
+                            <a style="text-decoration:none; color:#003399" href="Admin_ThongTinGiaoVien.aspx"><asp:Image ID="Image2" runat="server" Height="24px" 
+                                ImageUrl="~/icon/Profile.png" Width="23px" />
+                            Thông Tin Giáo viên</a></td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" 
+                            
+                            style="padding: 10px; margin: 10px; font-size: 15px; color: #003399; border-bottom-style: groove; border-bottom-color: #FFFFFF;">
+                             <a style="text-decoration:none; color:#003399" href="Admin_ThongTinSinhVien.aspx"><asp:Image ID="Image3" runat="server" Height="24px" 
+                                ImageUrl="~/icon/Modify.png" Width="23px" />
+                            Thông tin Sinh viên</a></td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" 
+                            
+                            style="padding: 10px; margin: 10px; font-size: 15px; color: #003399; border-bottom-style: groove; border-bottom-color: #FFFFFF;">
+                             <a style="text-decoration:none; color:#003399" href="Admin_Lop.aspx">
+                             <asp:Image ID="Image10" runat="server" Height="24px" 
+                                ImageUrl="~/icon/Line Chart.png" Width="23px" />
+                            Lớp Học</a></td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" 
+                            
+                            style="padding: 10px; margin: 10px; font-size: 15px; color: #003399; border-bottom-style: groove; border-bottom-color: #FFFFFF;">
+                            <a style="text-decoration:none; color:#003399" href="Admin_BoMon.aspx"><asp:Image ID="Image6" runat="server" Height="24px" 
+                                ImageUrl="~/icon/Loading.png" Width="23px" />
+                            Bộ Môn</a> </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" 
+                            
+                            style="padding: 10px; margin: 10px; font-size: 15px; color: #003399; border-bottom-style: groove; border-bottom-color: #FFFFFF;">
+                             <a style="text-decoration:none; color:#003399" href="Admin_PhanCongGiaoVien.aspx">
+                             <asp:Image ID="Image7" runat="server" Height="24px" 
+                                ImageUrl="~/icon/Comment.png" Width="23px" />
+                            Phân Công Giáo Viên</a></td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" 
+                            
+                            style="padding: 10px; margin: 10px; font-size: 15px; color: #003399; border-bottom-style: groove; border-bottom-color: #FFFFFF;">
+                             <a style="text-decoration:none; color:#003399" href="Admin_BangDiem.aspx">
+                             <asp:Image ID="Image4" runat="server" Height="24px" 
+                                ImageUrl="~/icon/Bar Chart.png" Width="23px" />
+                            Bảng Điểm</a></td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" 
+                            
+                            style="padding: 10px; margin: 10px; font-size: 15px; color: #003399; border-bottom-style: groove; border-bottom-color: #FFFFFF;">
+                             <a style="text-decoration:none; color:#003399" href="taikhoan.aspx">
+                             <asp:Image ID="Image9" runat="server" Height="24px" 
+                                ImageUrl="~/icon/Email.png" Width="23px" />
+                            Tài Khỏan</a></td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" 
+                            
+                            style="padding: 10px; margin: 10px; font-size: 15px; color: #003399; border-bottom-style: groove; border-bottom-color: #FFFFFF;">
+                             <a style="text-decoration:none; color:#003399" href="Dangnhap.aspx">
+                             <asp:Image ID="Image5" runat="server" Height="24px" 
+                                ImageUrl="~/icon/Exit.png" Width="23px" />
+                            Đăng Xuất</a></td>
+                    </tr>
+                </table>
+            
+            </td>
+            <td align="center" valign="top" style="width: 100%">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="25%" align="center" bgcolor="#179EE2" 
+                style="padding: 10px; margin: 10px; color: #FFFFFF; font-weight: bold;">
+                WebSite Quản Lý Sinh Viên<br />
+                Designed by: Kiều Vũ Anh Tú | Vũ Công Thành | Trần Minh Thảo
+                <br />
+                Lớp C10CNTT1</td>
+        </tr>
+     </table>
+  </form>
+</body>
+</html>

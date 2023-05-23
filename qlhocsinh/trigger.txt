@@ -1,0 +1,32 @@
+﻿ALTER TRIGGER stg_Xoalop
+ON Lop
+instead of delete
+AS
+begin
+	declare @malop nchar(10)
+	select @malop = malop
+	from deleted
+	
+	delete sinhvien
+	where malop = @malop
+	
+	delete lop
+	where malop = @malop
+end
+
+
+ALTER TRIGGER stg_XoaSinhVien
+ON dbo.sinhvien
+instead of delete
+as
+begin
+	declare @masv char(10)
+	select @masv = masv
+	from deleted
+	
+	delete from bangdiem
+	where masv = @masv
+	
+	delete from sinhvien
+	where masv = @masv
+end

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Mydatabase" Class="MyDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Mydatabase.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.st_checkAccountGroup" Method="st_checkAccountGroup">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="passuser" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.st_login" Method="st_login">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="pass" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.st_getgiaovieninfo" Method="st_getgiaovieninfo">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="st_getgiaovieninfoResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="magv" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tengv" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gioitinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="quequan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="ngayvaolam" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_getgiaovienid" Method="st_getgiaovienid">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.st_getsinhvienid" Method="st_getsinhvienid">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.st_changepasswordc1" Method="st_changepasswordc1">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="passcu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="passmoi" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.st_getaccountinfo" Method="st_getaccountinfo">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="st_getaccountinfoResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="matv" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="password1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nhom" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_changepasswordc2" Method="st_changepasswordc2">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="passc2cu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="passc2moi" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.st_forgotpassword" Method="st_forgotpassword">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="passc2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="passmoi" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.st_getpointofstudent" Method="st_getpointofstudent">
+    <Parameter Name="hocky" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="st_getpointofstudentResult">
+      <Column Name="tenmon" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="diemhs1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="diemhs2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="diemhs3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="diemtb" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.st_getsinhvieninfo" Method="st_getsinhvieninfo">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="st_getsinhvieninfoResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="masv" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="hoten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gioitinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="malop" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="quequan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="bachoc" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="nienkhoa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

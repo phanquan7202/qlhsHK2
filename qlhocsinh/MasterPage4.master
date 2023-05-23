@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage4.master.cs" Inherits="MasterPage4" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="margin: 0px auto 0px auto; text-align: center;">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/image/TDC.jpg" />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <div style="background-color: #179EE2; color: #FFFFFF; font-weight: bold; text-align: center; width: 1002px; height: 70px; padding-top: 5px; margin-right: auto; margin-left: auto;">
+                WebSite Quản Lý Sinh Viên<br />
+                Designed by: Kiều Vũ Anh Tú | Vũ Công Thành | Trần Minh Thảo
+                <br />
+                Lớp C10CNTT1
+        </div>
+    </div>
+    </form>
+</body>
+</html>
